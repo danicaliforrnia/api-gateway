@@ -6,3 +6,28 @@ eureka:
       defaultZone: http://admin:admin@localhost:8761/eureka
   instance:
     preferIpAddress: true
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+              - OPTIONS
+            exposedHeaders:
+              - Authorization
+              - Access-Control-Allow-Headers
+              - Origin
+              - Accept
+              - Content-Type,
+              - Content-Disposition
+              - Access-Control-Request-Method
+            allowedHeaders:
+              - Authorization
+              - Content-Type

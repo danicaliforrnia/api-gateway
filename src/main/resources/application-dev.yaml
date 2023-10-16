@@ -6,3 +6,10 @@ eureka:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
   instance:
     preferIpAddress: true
+security:
+  cors:
+    allowed-origins: 'http://web.com'
+    allowed-methods: 'GET,POST,PUT,PATCH,DELETE,OPTIONS'
+    allow-credentials: false
+    exposed-header: 'Authorization, Access-Control-Allow-Headers, Origin, Accept, Content-Type,Content-Disposition, Access-Control-Request-Method'
+    allowed-headers: 'Authorization,Content-Type,username,password,x-client-id'
